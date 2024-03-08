@@ -36,5 +36,5 @@ function draw() {
   rotate(angle);
   line(0,0,50,50);
   rect(0,0,50,50);
-  angle = angle + 1;
+  angle = angle + 10;
 }
