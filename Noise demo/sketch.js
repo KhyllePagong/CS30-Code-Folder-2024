@@ -16,7 +16,7 @@ function draw() {
   background(0);
   x = noise(time+4) * width;
   y = noise(time2 + 2) * height;
-  z = noise(y-x) * width;
+  z = random(100,150);
   color = noise(time)*width;
   color2 = noise(time)*width;
   color3 = noise(time)*width;
