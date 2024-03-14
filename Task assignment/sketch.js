@@ -1,40 +1,36 @@
-// Project Title
-// Your Name
-// Date
-//
-// Extra for Experts:
-// - describe what you did to take this project "above and beyond"
-let button = {r:0,x:0,y:0,color:""}
-let buttonpressed = false
+let buttonPressed = false;
+let myButton = {x: 0, y: 0, w: 0, h: 0, color: ""}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  button.r=100;
-  button.x=width/2-button.r/2;
-  button.y=height/2-button.r/2;
-  button.color="red";
+
+  myButton.w = 120;
+  myButton.h = 40;
+  myButton.x = width/2 - myButton.w/2;
+  myButton.y = height/2 - myButton.h/2;
+  myButton.color = "red";
 }
 
 function draw() {
-  background(30);
-  fill(255,0,0);
-  mousepressed();
-  if (buttonpressed===false){
+  background(220);
+
+  if (buttonPressed===false) {
     drawButton();
   }
-  else if (buttonpressed===true){
-    rect(200,200,50)
+}
+
+
+function mousePressed() {
+
+  if (mouseX > myButton.x && mouseX < (myButton.x + myButton.w)) {
+    if(true) {
+      buttonPressed = true;
+    }
+    
   }
-  mousepressed();
 
 }
-function mousepressed(){
-  if ((mouseX>button.r && mouseX < (button.r+button.x)) && (mouseY>button.r&&mouseY < (button.r+button.y))){
-      buttonpressed = true;
-  }
-}
 function drawButton() {
-  fill(button.color);
-  circle(button.x,button.y,button.r);
-  rect(100,100,100)
+  fill(myButton.color);
+  rect(myButton.x, myButton.y, myButton.w, myButton.h);
 }
