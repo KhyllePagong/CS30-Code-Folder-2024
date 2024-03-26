@@ -3,7 +3,7 @@ let myButton = {x: 0, y: 0, w: 0, h: 0, color: ""}
 let x = 0;
 let y = 0;
 let z = 0;
-let t=2000;
+let timer = 5;
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
@@ -23,13 +23,15 @@ function draw() {
     character();
     myButton.color=(0,255,150);
     drawButton();
-    for (let i=0; i < myButton.length; i++){
-      if (millis() > t){
-        buttonPressed=false;
-        let t=math.Floor(t*2);
-      }
+    if (frameCount % 60 === 0 && timer > 0){
+      timer--;
     }
-  }
+    if (timer===0){
+      myButton.color="red";
+      buttonPressed=false;
+      timer=5;
+    }
+    }
 }
 function mousePressed() {
 
