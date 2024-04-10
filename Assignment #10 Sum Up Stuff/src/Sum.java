@@ -2,10 +2,10 @@ public class Sum
 {
 	//instance variables
 	private int one, two, sum;
-	public void setNums(int one, int two)
+	public void setNums(int num1, int num2)
 	{
-		one=2;
-		two=6;
+		one=num1;
+		two=num2;
 	}
 
 	public void sum( )
