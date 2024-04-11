@@ -1,6 +1,6 @@
 public class Average {
-    private int one, div;
-    public void setNums(int num1)
+    private double one, div;
+    public void setNums(double num1)
     {
        one=num1;
     }
