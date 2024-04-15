@@ -10,6 +10,6 @@ public class Average {
     }
     public void print()
     {
-        System.out.println(one + "/2= " + div);
+        System.out.println(one + "/2.0= " + div);
     }
 }
