@@ -26,7 +26,7 @@ public class AreaofTRunner {
         calculate.calcA();
 
 
-        System.out.print("Please input the sides of the triangle. \na=");
+        System.out.print("Please input the sides of the third triangle. \na=");
         a = keyboard.nextInt();
         System.out.print("b=");
         b = keyboard.nextInt();
