@@ -17,9 +17,10 @@ public class AreaofT {
     }
     public void calcP(int a, int b, int c){
         perimeter = a + b + c;
-        System.out.println(perimeter);
+        System.out.println("The perimeter is " + perimeter);
     }
     public void calcA(){
-
+        area = perimeter / 2;
+        System.out.println("The area is " + area);
     }
 }
