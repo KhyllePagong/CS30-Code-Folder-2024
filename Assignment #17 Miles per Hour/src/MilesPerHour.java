@@ -1,24 +1,43 @@
-import java.lang.Math;
-import java.util.Scanner;
-public class MilesPerHour {
-    private int distance,minutes,hour;
-    private double avg;
-    private double time;
-    Scanner keybord = new Scanner(System.in);
-    public void input (){
-        System.out.print("Please input the\nDistance:");
-        int distance = keyboard.nextInt();
-        System.out.print("Hour:");
-        int hour = keyboard.nextInt();
-        System.out.print("Minutes: ");
-        int minutes = keyboard.nextInt();
-    }
-    public void calculate(){
-        time = hour + (minutes * 60);
-        avg = distance / time;
-    }
-    public void print(){
-        System.out.println("The average is "+avg+" miles/hour");
-    }
+import java.util.Scanner; 
+import static java.lang.System.*;
+import static java.lang.Math.*;
 
+public class MilesPerHour
+{
+	private int distance, hours, minutes;
+	private double mph,time;
+
+	public MilesPerHour()
+	{
+		setNums(0,0,0);
+		mph=0.0;
+	}
+
+	public MilesPerHour(int dist, int hrs, int mins)
+	{
+        distance=dist;
+        hours = hrs;
+        minutes=mins;
+
+	}
+
+	public void setNums(int dist, int hrs, int mins)
+	{
+        distance=dist;
+        hours = hrs;
+        minutes=mins;
+	}
+
+	public void calcMPH()
+	{
+        time = hours + (minutes * 60);   
+        mph = distance / time;
+    
+	}
+
+	public void print()
+	{
+        System.out.println(distance + " miles in " + hours + " hour(s) and " + minutes + " minute(s)= " + mph + " mph.");
+
+	}
 }
