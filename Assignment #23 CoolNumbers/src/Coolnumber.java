@@ -1,23 +1,12 @@
-import static java.lang.System.*;
-
 public class Coolnumber
 {
-    private int z;
-    private static boolean check;
-	public static void isCoolNumber( int num )
-	{
-        int z = 0;
-        for (int x = 6; x < num; x++){
-            if (num % x == 1){
-                z += 1;
-            }
-        }
-        if (z == 4){
-            check = true;
+	public static boolean isCoolNumber( int num ){           
+        if (num % 3 == 1 && num % 4 == 1 && num % 5 == 1 && num % 6 == 1){
+        return true;
         }
         else {
-            check = false;
-        }
+        return false;
+        }   
 	}
 	
 		/*
@@ -27,9 +16,11 @@ public class Coolnumber
 	public static int countCoolNumbers( int stop )
 	{
         int a = 0;
-        if (check==true){
-            a=1;
+        for (int i = 6; i < stop; i++){
+            if (isCoolNumber(i)){
+                a+=1;
+            }
         }
-		return a;
+        return a;
 	}
 }
