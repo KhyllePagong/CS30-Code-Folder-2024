@@ -1,4 +1,3 @@
-import java.lang.Math;
 public class NumCompare {
     public void print(int a, int b){
         if (a > b){
