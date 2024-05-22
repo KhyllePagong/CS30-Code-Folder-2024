@@ -41,7 +41,7 @@ public class ArrayFun {
         public static int getCount(int[] numArray, int val)
         {
             int total = 0;
-            for (int i = 0; i <= numArray.length;i++){
+            for (int i = 0; i < numArray.length;i++){
                 if (numArray[i]==val){
                     total++;
                 }
